@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  n8n:
+    image: n8nio/n8n
+    restart: always
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_BASIC_AUTH_USER=raremalo
+      - N8N_BASIC_AUTH_PASSWORD=PdC9J65TJAVmsGS7wsU%
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=https
+      - N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE=true
+    volumes:
+      - ./.n8n:/home/node/.n8n
